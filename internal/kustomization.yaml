@@ -1,0 +1,21 @@
+nameSuffix: -internal
+
+commonLabels:
+  ingress-class: internal
+
+resources:
+  - ../base/ingress-nginx/templates/controller-configmap.yaml
+  - ../base/ingress-nginx/templates/controller-deployment.yaml
+  - ../base/ingress-nginx/templates/controller-ingressclass.yaml
+  - ../base/ingress-nginx/templates/controller-service-webhook.yaml
+  - ../base/ingress-nginx/templates/controller-service.yaml
+
+patches:
+  - target:
+      kind: Service
+      name: ingress-nginx-controller
+    path: patches/controller-service.yaml
+  - target:
+      kind: Deployment
+      name: ingress-nginx-controller
+    path: patches/controller-deployment.yaml

@@ -1,0 +1,17 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+resources:
+  - templates/admission-webhooks/job-patch/clusterrole.yaml
+  - templates/admission-webhooks/job-patch/clusterrolebinding.yaml
+  - templates/admission-webhooks/job-patch/job-createSecret.yaml
+  - templates/admission-webhooks/job-patch/job-patchWebhook.yaml
+  - templates/admission-webhooks/job-patch/role.yaml
+  - templates/admission-webhooks/job-patch/rolebinding.yaml
+  - templates/admission-webhooks/job-patch/serviceaccount.yaml
+  - templates/admission-webhooks/validating-webhook.yaml
+  - templates/clusterrole.yaml
+  - templates/clusterrolebinding.yaml
+  - templates/controller-role.yaml
+  - templates/controller-rolebinding.yaml
+  - templates/controller-serviceaccount.yaml

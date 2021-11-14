@@ -1,0 +1,5 @@
+resources:
+  - ../base/ingress-nginx
+  - ../internal
+  - ../external
+  - resources/namespace.yaml

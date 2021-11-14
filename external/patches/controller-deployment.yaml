@@ -1,0 +1,9 @@
+- op: replace
+  path: /spec/template/spec/containers/0/args/1
+  value: --publish-service=$(POD_NAMESPACE)/ingress-nginx-controller-external
+- op: replace
+  path: /spec/template/spec/containers/0/args/3
+  value: --controller-class=k8s.io/nginx-external
+- op: replace
+  path: /spec/template/spec/containers/0/args/4
+  value: --configmap=$(POD_NAMESPACE)/ingress-nginx-controller-external
